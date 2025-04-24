@@ -1,0 +1,96 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: '微軟正黑體', Arial, sans-serif;
+  overflow: hidden; /* 防止畫布滾動 */
+}
+
+/* 選單容器 */
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 100px; /* 距離右邊框 100px */
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 3; /* 選單在最上層 */
+}
+
+/* 選單項目 */
+.menu li {
+  position: relative;
+  background-color: rgba(0, 48, 73, 0.2); /* 背景顏色透明度 0.2 */
+  color: #ff7b00;
+  font-size: 30px;
+  font-family: '微軟正黑體', Arial, sans-serif;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-right: 30px;
+  padding: 0 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.menu li:hover {
+  color: #588157;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: rgba(0, 48, 73, 0.9);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+.submenu li {
+  margin: 0;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.submenu li a {
+  color: #ff7b00;
+  font-size: 20px;
+}
+
+.submenu li:hover {
+  background-color: rgba(0, 48, 73, 0.7);
+  color: #588157;
+}
+
+.content-frame {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2); /* 背景透明度 0.2 */
+  z-index: 2; /* iframe 在第二層 */
+}
